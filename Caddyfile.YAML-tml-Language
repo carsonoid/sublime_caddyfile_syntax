@@ -1,0 +1,22 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Caddyfile
+scopeName: source.caddyfile
+fileTypes: ['Caddyfile']
+uuid: 4d692e05-36b1-4a50-84be-e33954af8e47
+
+patterns:
+
+ - name: comment.line.number-sign
+   match: '#.*'
+
+ - name: directive.caddyfile
+   match: '^\s*(\w+)\s+'
+   captures:
+     '1': {name: keyword.caddyfile}
+
+ - name: server.caddyfile
+   match: '^(\w+):(\d+)'
+   captures:
+     '1': {name: entity.caddyfile}
+     '2': {name: constant.numeric.caddyfile}

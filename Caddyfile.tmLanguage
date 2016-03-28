@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>Caddyfile</string>
+	</array>
+	<key>name</key>
+	<string>Caddyfile</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>#.*</string>
+			<key>name</key>
+			<string>comment.line.number-sign</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.caddyfile</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*(\w+)\s+</string>
+			<key>name</key>
+			<string>directive.caddyfile</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.caddyfile</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.caddyfile</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^(\w+):(\d+)</string>
+			<key>name</key>
+			<string>server.caddyfile</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.caddyfile</string>
+	<key>uuid</key>
+	<string>4d692e05-36b1-4a50-84be-e33954af8e47</string>
+</dict>
+</plist>
